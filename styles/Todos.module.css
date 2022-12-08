@@ -1,7 +1,7 @@
 .container {
   background-color: #fff;
   border-radius: 10px;
-  width: 60%;
+  width: 90%;
   margin: auto;
   padding: 2rem 3rem;
 }
@@ -14,7 +14,7 @@
 }
 
 .inputField {
-  width: 85%;
+  width: 70%;
 }
 
 .addBtn {
@@ -38,5 +38,9 @@
 @media (min-width: 600px) {
   .inputField {
     width: 80%;
+  }
+
+  .container {
+    width: 60%;
   }
 }
