@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo } from "../redux/action";
+
 
 import Button from "@mui/material/Button";
 import {TextField } from "@mui/material";
@@ -8,6 +11,11 @@ import styles from "../styles/Todos.module.css";
 
 const Todos = (props) => {
     const [todo, setTodo] = useState("");
+
+    
+  const dispatch = useDispatch();
+  const selector = useSelector((state) => state.todoReducer.list);
+
 
     return (
         <div className={styles.container}>
@@ -28,11 +36,34 @@ const Todos = (props) => {
 
           variant="contained"
           color="secondary"
+          onClick={() => dispatch(addTodo(todo), setTodo(""))}
+
         >
           Add
         </Button>
         </div>
 
+
+
+
+        {selector?.map((item) => {
+        return (
+          <div key={item.id} className={styles.taskRow}>
+            <p>{item.data} </p>
+            <div>
+
+              <Button
+                onClick={() => dispatch(removeTodo(item.id))}
+                style={{ color: "red" }}
+              >
+                {/* <DeleteIcon /> */}
+                del
+              </Button>
+
+            </div>
+          </div>
+        );
+      })}
 
         </div>
     )
