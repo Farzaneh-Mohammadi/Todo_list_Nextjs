@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, removeTodo } from "../redux/action";
+import { addTodo, removeTodo} from "../redux/action";
 
 
 import Button from "@mui/material/Button";
@@ -8,6 +8,7 @@ import {TextField } from "@mui/material";
 
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
 
 
 
@@ -71,6 +72,8 @@ const Todos = (props) => {
           </div>
         );
       })}
+
+
 
         </div>
     )
