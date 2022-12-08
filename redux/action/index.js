@@ -1,5 +1,6 @@
 export const ADD_TODO = "ADD_TODO";
 export const REMOVE_TODO = "REMOVE_TODO";
+export const EDIT_TODO = "EDIT_TODO";
 
 
 export const addTodo = (data) => {
@@ -20,6 +21,18 @@ export const addTodo = (data) => {
     };
   };
 
+
+  export const editTodo = (data, id) => {
+    return {
+      type: EDIT_TODO,
+      payload: {
+        data: data,
+        id,
+      },
+     
+    };
+  };
+  
   
 
 
