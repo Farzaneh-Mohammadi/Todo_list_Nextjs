@@ -35,6 +35,6 @@ This Project is for managing tasks with **CRUD** features: *Create* a new task a
 -  Using  *redux-persist* persist data in localStorage 
 
 ## Demo
-you can see of this project [Here](https://todo-list-nextjs-one.vercel.app/)
+see demo [Here](https://todo-list-nextjs-one.vercel.app/)
 
 
