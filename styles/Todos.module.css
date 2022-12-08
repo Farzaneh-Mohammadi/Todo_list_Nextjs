@@ -1,0 +1,25 @@
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    padding: 2rem 3rem;
+}
+
+.inputBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+
+}
+
+
+.inputField {
+    width: 70%;
+}
+
+.addBtn {
+    padding: .9rem;
+}
+
