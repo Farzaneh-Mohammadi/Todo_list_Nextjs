@@ -83,7 +83,7 @@ const Todos = (props) => {
           <div key={item.id} className={styles.taskRow}>
             <p>{item.data}</p>
 
-            <div>
+            <div className={styles.taskBtns}>
               <Button
                 onClick={() =>
                   dispatch(
