@@ -1,46 +1,42 @@
 .container {
-    background-color: #fff;
-    border-radius: 10px;
-    width: 60%;
-    margin: auto;
-    padding: 2rem 3rem;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+  padding: 2rem 3rem;
 }
 
 .inputBox {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2rem;
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-
 .inputField {
-    width: 85%;
+  width: 85%;
 }
 
 .addBtn {
-    padding: .9rem;
+  padding: 0.9rem;
 }
 
 .taskRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #eccff88f;
-    padding: 5px 0 5px 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eccff88f;
+  padding: 5px 0 5px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .taskRow:hover {
-    background-color: #b091bd8f;
+  background-color: #b091bd8f;
 }
 
-@media (min-width: 600px)  {
-  
-    .inputField {
-        width: 80%;
-    }
-    
-    }
+@media (min-width: 600px) {
+  .inputField {
+    width: 80%;
+  }
+}

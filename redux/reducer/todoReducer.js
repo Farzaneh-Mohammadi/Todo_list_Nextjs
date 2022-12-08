@@ -2,6 +2,7 @@ import { ADD_TODO, REMOVE_TODO, EDIT_TODO } from "../action";
 
 const initialState = {
   list: [],
+  text: "",
 };
 
 export const todoReducer = (state = initialState, action) => {
@@ -11,6 +12,7 @@ export const todoReducer = (state = initialState, action) => {
       return {
         ...state,
         list: [...state.list, { data, id }],
+        text: "",
       };
 
     case REMOVE_TODO:
@@ -23,14 +25,17 @@ export const todoReducer = (state = initialState, action) => {
     case EDIT_TODO:
       const updatedTodo = state.list.map((todo) => {
         if (todo.id === action.id) {
-          return { ...state, list: action.payload };
+          return { ...state, list: action.payload, text:state.list[action.payload] };
         }
-
         return state;
       });
       return {
         ...state,
       };
+
+
+
+
 
     default:
       return state;

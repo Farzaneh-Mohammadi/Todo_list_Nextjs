@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import { addTodo, removeTodo, editTodo } from "../redux/action";
+
 import styles from "../styles/Todos.module.css";
 
 import Button from "@mui/material/Button";
@@ -15,30 +15,28 @@ const Todos = (props) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editTask, setEditTask] = useState("");
 
-  const dispatch = useDispatch();
-  const selector = useSelector((state) => state.todoReducer.list);
+  const dispatch = useDispatch(); //wrap actions
+  const selector = useSelector((state) => state.todoReducer.list); //fetch data
 
-  useEffect(() => {
-    setTodo(editTask);
-  }, [editTask]);
 
   const submitEditHandler = (e) => {
     setEditTask(e.target.value);
-    const newww = editTask;
-    setTodo({ ...todo, newww });
-    console.log("todo:", todo);
+    const newTask = editTask;
+    setTodo({ ...todo, newTask }); //to replace new task with old task
 
-    setIsEditing(false);
   };
 
   const handleChange = (e) => {
+    setIsEditing(true);
     setEditTask(e.target.value);
     setTodo(editTask);
-    setIsEditing(true);
+
   };
+
 
   return (
     <div className={styles.container}>
+
       {/* --------- Add new tasks ----------- */}
       <div className={styles.inputBox}>
         <TextField
@@ -56,7 +54,7 @@ const Todos = (props) => {
           className={styles.addBtn}
           onClick={() => dispatch(addTodo(todo), setTodo(""))}
         >
-          Add
+          {isEditing ? "Update" : "Add"}
         </Button>
       </div>
 
@@ -77,6 +75,7 @@ const Todos = (props) => {
           </Button>
         </div>
       ) : null}
+
 
       {/* --------- Show list ----------- */}
       {selector?.map((item) => {
