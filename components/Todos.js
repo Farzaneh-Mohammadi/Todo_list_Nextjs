@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo } from "../redux/action";
+import { addTodo, removeTodo } from "../redux/action";
 
 
 import Button from "@mui/material/Button";
 import {TextField } from "@mui/material";
+
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
+
+
 
 import styles from "../styles/Todos.module.css";
 
@@ -56,9 +61,11 @@ const Todos = (props) => {
                 onClick={() => dispatch(removeTodo(item.id))}
                 style={{ color: "red" }}
               >
-                {/* <DeleteIcon /> */}
-                del
+                <DeleteIcon />
+               
               </Button>
+
+
 
             </div>
           </div>

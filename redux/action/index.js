@@ -1,4 +1,6 @@
 export const ADD_TODO = "ADD_TODO";
+export const REMOVE_TODO = "REMOVE_TODO";
+
 
 export const addTodo = (data) => {
     return {
@@ -10,3 +12,10 @@ export const addTodo = (data) => {
     };
   };
   
+
+  export const removeTodo = (id) => {
+    return {
+      type: REMOVE_TODO,
+      id,
+    };
+  };
