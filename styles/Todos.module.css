@@ -16,10 +16,24 @@
 
 
 .inputField {
-    width: 70%;
+    width: 85%;
 }
 
 .addBtn {
     padding: .9rem;
+}
+
+.taskRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eccff88f;
+    padding: 5px 0 5px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.taskRow:hover {
+    background-color: #b091bd8f;
 }
 
